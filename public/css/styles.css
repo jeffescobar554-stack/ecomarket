@@ -1,0 +1,260 @@
+/* ============================
+   ESTILOS GENERALES
+============================ */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #e6f9ee, #c1eac5);
+    color: #2d4739;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================
+   HEADER
+============================ */
+.header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background: #ffffffb4;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo i {
+    font-size: 35px;
+    color: #2e7d32;
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #2e7d32;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* ============================
+   SECCIÓN DE BIENVENIDA
+============================ */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+}
+
+.welcome-content {
+    text-align: center;
+    max-width: 500px;
+    background: #ffffffc5;
+    padding: 40px;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+}
+
+.welcome-content h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.welcome-content p {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* ============================
+   BOTONES
+============================ */
+.btn {
+    padding: 12px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #2e7d32;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #256628;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #a5d6a7;
+    color: #1b5e20;
+}
+
+.btn-secondary:hover {
+    background: #8ccf90;
+    transform: translateY(-2px);
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   CARDS DE LOGIN / REGISTRO
+============================ */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffffd7;
+    backdrop-filter: blur(6px);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1b5e20;
+}
+
+/* ============================
+   FORMULARIOS
+============================ */
+.auth-form .form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.auth-form label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d4739;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 12px 40px 12px 14px;
+    border-radius: 10px;
+    border: 2px solid #a5d6a7;
+    outline: none;
+    margin-top: 5px;
+    transition: 0.2s ease;
+    font-size: 15px;
+}
+
+.auth-form input:focus {
+    border-color: #2e7d32;
+}
+
+.input-icon {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-size: 18px;
+    color: #388e3c;
+}
+
+/* ============================
+   ENLACES DEL FORMULARIO
+============================ */
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-links p {
+    font-size: 14px;
+}
+
+.auth-links a {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   NOTIFICACIONES
+============================ */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e7d32;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.notification.hidden {
+    display: none;
+}
+
+/* ============================
+   ANIMACIONES SUAVES
+============================ */
+.auth-card, .welcome-content {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
